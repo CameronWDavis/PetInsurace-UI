@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+:root {
+    --primary-color: rgba(255, 255, 255, 0.87);
+    --background-color: #242424;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    background-color: var(--background-color);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+.default {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+select.selected {
+    background-color: var(--primary-color);
+    transition: border-color 0.25s;
+    color: var(--background-color)
+}
+
+
+.submit {
+    border: unset;
+    background-color: gray;
+}
+
+.button-group {
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.button-group button {
+    cursor: pointer;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    transition: border-color 0.25s;
+}
+
+.button-group button + button {
+    border-left: 1px solid #ccc;
+    border-radius: unset;
+}
+
+.button-group button:first-child {
+    border-radius: 6px 0 0 6px;
+}
+
+.button-group button:last-child {
+    border-radius: 0 6px 6px 0;
+}
+
+button.selected {
+    background-color: var(--primary-color);
+    transition: background-color 0.25s;
+    color: var(--background-color)
+}
+
+button.hovered {
+    background-color: darkblue;
+    transition: background-color 0.25s;
+    color: var(--primary-color)
+}
+
+button:disabled{
+    color: gray;
+    border: gray
+}
+
+span.hovered {
+    background-color: darkblue;
+    transition: background-color 0.25s;
+    color: var(--primary-color)
+}
+
+span.add {
+    transition: text-color 0.25s;
+    color: green
+}
+
+span.subtract {
+    transition: text-color 0.25s;
+    color: red
+}
+
+
+.toggle-grid {
+    display: grid;
+    grid-template-columns: 6rem 6rem;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.toggle-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
